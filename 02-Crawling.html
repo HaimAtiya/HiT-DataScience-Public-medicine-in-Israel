@@ -14097,8 +14097,8 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Now that there are functions that help control selenium, we can get started.\
-I am going to bring all the available appointments of the Maccabi HMO.\
+<p>Now that there are functions that help control selenium, we can get started.<br />
+I am going to bring all the available appointments of the Maccabi HMO.<br />
 First, let's access Maccabi's website using openBroswerWindow() function:</p>
 
 </div>
@@ -14112,23 +14112,23 @@ First, let's access Maccabi's website using openBroswerWindow() function:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Before I start crawling,I will need important information that will make the job easier for me.\
-Using the web inspector in the browser,\
-I researched Maccabi's website, the appointment system and learned how it works,\
-Now I will use the functions i wrote above to simulate a patient \
+<p>Before I start crawling,I will need important information that will make the job easier for me.<br />
+Using the web inspector in the browser,<br />
+I researched Maccabi's website, the appointment system and learned how it works,<br />
+Now I will use the functions i wrote above to simulate a patient <br />
 looking for an appointment for doctors in various fields.</p>
-<h4 id="The-process-will-be-as-follows:">The process will be as follows:<a class="anchor-link" href="#The-process-will-be-as-follows:">&#182;</a></h4><p>==&gt; For each of the areas of treatment:\
-====&gt; The crawler will enter the search page and enter a treatment area and click the search button.\
-====&gt; For each resulting page:\
-======&gt; For each of the queues on the page:\
+<h4 id="The-process-will-be-as-follows:">The process will be as follows:<a class="anchor-link" href="#The-process-will-be-as-follows:">&#182;</a></h4><p>==&gt; For each of the areas of treatment:<br />
+====&gt; The crawler will enter the search page and enter a treatment area and click the search button.<br />
+====&gt; For each resulting page:<br />
+======&gt; For each of the queues on the page:<br />
 ========&gt; The crawler will retrieve the relevant information for the queued queue.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In order to carry out the proposed solution,\
-we will need to find all the areas of care that Maccabi offers to its insured.\
+<p>In order to carry out the proposed solution,<br />
+we will need to find all the areas of care that Maccabi offers to its insured.<br />
 Let's go to the "Services Guide" and see what can be obtained from there.</p>
 
 </div>
@@ -14196,7 +14196,7 @@ Driver [******.wdm\drivers\geckodriver\win64\v0.31.0\geckodriver.exe] found in c
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This data is going to help us later while we scraping Maccabi's website for available appoitments.\
+<p>This data is going to help us later while we scraping Maccabi's website for available appoitments.<br />
 Lets save it for now.</p>
 
 </div>
@@ -14268,8 +14268,8 @@ None
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Cool, we have 102 treatment fields to scan!\
-Now that we have the preliminary information we were looking for,\
+<p>Cool, we have 102 treatment fields to scan!<br />
+Now that we have the preliminary information we were looking for,<br />
 We will write functions that will help us keep the code clean and readable.</p>
 
 </div>
@@ -14283,7 +14283,7 @@ We will write functions that will help us keep the code clean and readable.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Based on the information I have gathered about how the appointment system works and the HTML structure,\
+<p>Based on the information I have gathered about how the appointment system works and the HTML structure,<br />
 I will record actions that will help me crawl.</p>
 
 </div>
@@ -14298,15 +14298,15 @@ I will record actions that will help me crawl.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="getElement(row,-by,-value,-func=-None,-funcValue-=-None,-elements-=-False):">getElement(row, by, value, func= None, funcValue = None, elements = False):<a class="anchor-link" href="#getElement(row,-by,-value,-func=-None,-funcValue-=-None,-elements-=-False):">&#182;</a></h4><p>The function returns selenuim web object using find_element functions.\
-This function is required because there are some objects that dosn't appear in diffrent web pages,\
+<h4 id="getElement(row,-by,-value,-func=-None,-funcValue-=-None,-elements-=-False):">getElement(row, by, value, func= None, funcValue = None, elements = False):<a class="anchor-link" href="#getElement(row,-by,-value,-func=-None,-funcValue-=-None,-elements-=-False):">&#182;</a></h4><p>The function returns selenuim web object using find_element functions.<br />
+This function is required because there are some objects that dosn't appear in diffrent web pages,<br />
 and using the selenuim dedicated function to get a missing object will results in assertion error.</p>
 <h4 id="numOfDoctors(docNumStr):">numOfDoctors(docNumStr):<a class="anchor-link" href="#numOfDoctors(docNumStr):">&#182;</a></h4><p>The function extract the number of doctors that came up in the serach results using regex.</p>
 <h4 id="extractGender(imageUrl):">extractGender(imageUrl):<a class="anchor-link" href="#extractGender(imageUrl):">&#182;</a></h4><p>The function extract the gender of the doctor using comparsion between constant avatar images.</p>
 <h4 id="getAddress(addressStr):">getAddress(addressStr):<a class="anchor-link" href="#getAddress(addressStr):">&#182;</a></h4><p>The function extract the clinic address and returns the city and the street name and number.
 City and street name and number obtained by using regex.</p>
 <h4 id="getSpeciality(docField,-numOfTitle,-getNumOfSpeciality-=-False):">getSpeciality(docField, numOfTitle, getNumOfSpeciality = False):<a class="anchor-link" href="#getSpeciality(docField,-numOfTitle,-getNumOfSpeciality-=-False):">&#182;</a></h4><p>The function the doctor's speciality.</p>
-<h4 id="extractFromArray(arr,-index):">extractFromArray(arr, index):<a class="anchor-link" href="#extractFromArray(arr,-index):">&#182;</a></h4><p>The function extract object from array.\
+<h4 id="extractFromArray(arr,-index):">extractFromArray(arr, index):<a class="anchor-link" href="#extractFromArray(arr,-index):">&#182;</a></h4><p>The function extract object from array.<br />
 This function is reqiured to avoid out of bounds situations.</p>
 
 </div>
@@ -14391,9 +14391,9 @@ This function is reqiured to avoid out of bounds situations.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="scrapeDocDetails(url):">scrapeDocDetails(url):<a class="anchor-link" href="#scrapeDocDetails(url):">&#182;</a></h4><p>The main scrape doctor details page funtion.\
+<h4 id="scrapeDocDetails(url):">scrapeDocDetails(url):<a class="anchor-link" href="#scrapeDocDetails(url):">&#182;</a></h4><p>The main scrape doctor details page funtion.<br />
 This function used to scarpe each doctor's page individualy.</p>
-<h4 id="getDocProperties(text):">getDocProperties(text):<a class="anchor-link" href="#getDocProperties(text):">&#182;</a></h4><p>The function extract boolean value of the following properties:\
+<h4 id="getDocProperties(text):">getDocProperties(text):<a class="anchor-link" href="#getDocProperties(text):">&#182;</a></h4><p>The function extract boolean value of the following properties:<br />
 needsReferral, performUS, absence, acceptingNewPatients, videoCall.</p>
 <h4 id="extractActivityTime(timeObjects):">extractActivityTime(timeObjects):<a class="anchor-link" href="#extractActivityTime(timeObjects):">&#182;</a></h4><p>The function extract a weekly calander that includes the doctor's activity time.</p>
 <h4 id="getDoctorNameAndTitle(docNameString):">getDoctorNameAndTitle(docNameString):<a class="anchor-link" href="#getDoctorNameAndTitle(docNameString):">&#182;</a></h4><p>The function extract the doctor's name and title using regex.</p>
@@ -14515,8 +14515,8 @@ needsReferral, performUS, absence, acceptingNewPatients, videoCall.</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="scrapePage(results):">scrapePage(results):<a class="anchor-link" href="#scrapePage(results):">&#182;</a></h4><p>This function gets 1 pages as selenuim object and scrape each appoitment on this page.\
-Each page contains up to 10 appoitments.\
+<h4 id="scrapePage(results):">scrapePage(results):<a class="anchor-link" href="#scrapePage(results):">&#182;</a></h4><p>This function gets 1 pages as selenuim object and scrape each appoitment on this page.<br />
+Each page contains up to 10 appoitments.<br />
 The function returns a temporary dataframe that includes all the appoitments details on the given page.</p>
 
 </div>
@@ -14598,8 +14598,8 @@ The function returns a temporary dataframe that includes all the appoitments det
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="scrapeOneField(fieldID,-startFromPage-=-None):">scrapeOneField(fieldID, startFromPage = None):<a class="anchor-link" href="#scrapeOneField(fieldID,-startFromPage-=-None):">&#182;</a></h4><p>The function returns the entire appoitments data about the given field.\
-It's loop the entire field page and scrapes each page using <strong>scrapePage(results)</strong> function.\
+<h4 id="scrapeOneField(fieldID,-startFromPage-=-None):">scrapeOneField(fieldID, startFromPage = None):<a class="anchor-link" href="#scrapeOneField(fieldID,-startFromPage-=-None):">&#182;</a></h4><p>The function returns the entire appoitments data about the given field.<br />
+It's loop the entire field page and scrapes each page using <strong>scrapePage(results)</strong> function.<br />
 The function returns a temporary dataframe that includes all the appoitments details on the given field.</p>
 
 </div>
@@ -14659,7 +14659,7 @@ The function returns a temporary dataframe that includes all the appoitments det
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>After all the hard work we can start the work of scraping.\
+<p>After all the hard work we can start the work of scraping.<br />
 First, Lets define our dataframe:</p>
 
 </div>
@@ -14680,9 +14680,9 @@ First, Lets define our dataframe:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Using the functions i wrote above we can start scraping,\
-I'm going to loop each field and use the <strong>scrapeOneField()</strong> function that returns a dataframe of the given field.\
-Every dataframe that returns will append to the main dataframe.\
+<p>Using the functions i wrote above we can start scraping,<br />
+I'm going to loop each field and use the <strong>scrapeOneField()</strong> function that returns a dataframe of the given field.<br />
+Every dataframe that returns will append to the main dataframe.<br />
 Lets do this!</p>
 
 </div>
@@ -14848,8 +14848,8 @@ Total appointments scraped: 12183
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wow!\
-It took a long time, let's hope the wait was not in vain.\
+<p>Wow!<br />
+It took a long time, let's hope the wait was not in vain.<br />
 Let's see what we got!</p>
 
 </div>
@@ -15081,8 +15081,8 @@ Let's see what we got!</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Okay, that looks great.\
-Undoubtedly the information meets the minimum requirements (50K data item).\
+<p>Okay, that looks great.<br />
+Undoubtedly the information meets the minimum requirements (50K data item).<br />
 Let's check just how many:</p>
 
 </div>
@@ -15130,15 +15130,15 @@ Let's check just how many:</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As you may have noticed there is a big gap between the number of all the doctors we scraped from the Maccabi website,\
-and the number of lines in my dataframe.\
+<p>As you may have noticed there is a big gap between the number of all the doctors we scraped from the Maccabi website,<br />
+and the number of lines in my dataframe.<br />
 The difference is due to 2 reasons:</p>
 <ol>
-<li>The number of doctors listed is the number of doctors who were at the beginning of the search,\
+<li>The number of doctors listed is the number of doctors who were at the beginning of the search,<br />
 as you know the search took a long time and during which appointments were scheduled / canceled.</li>
-<li>The number of doctors on the list is the total number of doctors who work at the Maccabi HMO.\
-Our study refers to Maccabi doctors in public medicine only,\
-that the payment for the appointment is covered by health insurance or a minimum deductible\
+<li>The number of doctors on the list is the total number of doctors who work at the Maccabi HMO.<br />
+Our study refers to Maccabi doctors in public medicine only,<br />
+that the payment for the appointment is covered by health insurance or a minimum deductible<br />
 and therefore the code adds to the dataframe only doctors from public medicine.</li>
 </ol>
 
@@ -15146,7 +15146,7 @@ and therefore the code adds to the dataframe only doctors from public medicine.<
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>After all this is said, let's save the dataframe we got to the CSV file.\
+<p>After all this is said, let's save the dataframe we got to the CSV file.<br />
 We save the dataframe in the "utf-8-sig" encoding because the information includes Hebrew characters\ 
 and we must use the appropriate encoding so that we can read from it in the following steps.</p>
 
